@@ -1,0 +1,36 @@
+{
+	"name": "super-kernel/scan-isolate",
+	"description": "Scan isolators for PHP.",
+	"type": "library",
+	"license": "MIT",
+	"keywords": [
+		"super-kernel",
+		"isolate",
+		"scan"
+	],
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"require": {
+		"php": "~8.4.0",
+		"ext-json": "*"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "~11.5.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"SuperKernel\\ScanIsolate\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"SuperKernelTests\\ScanIsolate\\": "tests/"
+		}
+	},
+	"scripts": {
+		"phpunit": "@php phpunit --configuration=phpunit.xml.dist"
+	},
+	"suggest": {
+		"ext-pcntl": "Required for the PcntlScanIsolator implementation."
+	}
+}
